@@ -1,0 +1,14 @@
+body {
+  font-style: italic;
+  font-family: unset;
+  font-size: 60px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+
+}
+
+.title {
+  text-align: center;
+}
+
