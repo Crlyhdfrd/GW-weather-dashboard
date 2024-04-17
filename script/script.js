@@ -38,7 +38,7 @@ function displayWeather(data) {
   document.getElementById("city-hum").innerText =
     "Humidity: " + data.main.humidity + "%";
   document.getElementById("city-wind").innerText =
-    "Wind Speed: " + data.wind.speed + " mph";
+    "Wind Speed: " + data.wind.speed + "mph";
   document.getElementById("city-icon").src = getWeatherIcon(
     data.weather[0].icon
   );
@@ -60,4 +60,4 @@ function main() {
   getWeather("Dallas");
 }
 
-// main();
+main();
