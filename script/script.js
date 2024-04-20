@@ -1,7 +1,3 @@
-//var APIKey = "98a5a136a93d1ff5a8e840d473af4ec0"
-//var city;
-//var state;
-
 let weather = {
   apiKey: "1d5828eb71ccc2ff98c538b094271c14",
   fetchWeather: function () {},
@@ -10,7 +6,7 @@ let weather = {
 // Get the weather data from the API
 function getWeather(city) {
   fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
       city +
       "&units=imperial&appid=1d5828eb71ccc2ff98c538b094271c14"
   )
@@ -31,17 +27,24 @@ function getWeather(city) {
 
 // Display the weather data on the page
 function displayWeather(data) {
-  console.log(data);
-  document.getElementById("city-heading").innerText = "Weather in " + data.name;
-  document.getElementById("city-temp").innerText = data.main.temp + "°F";
-  document.getElementById("city-des").innerText = data.weather[0].description;
-  document.getElementById("city-hum").innerText =
-    "Humidity: " + data.main.humidity + "%";
-  document.getElementById("city-wind").innerText =
-    "Wind Speed: " + data.wind.speed + "mph";
-  document.getElementById("city-icon").src = getWeatherIcon(
-    data.weather[0].icon
-  );
+  document.getElementById("city-heading").innerText =
+    "Weather in " + data.city.name;
+  for (let i = 0; i < 5; i++) {
+    let daydata = data.list[i * 8];
+    
+    let parent = document.getElementById("card-" + i);
+    console.log(data);
+    parent.querySelector("#day-heading").innerText = "Weather on Day " + (i + 1);
+    parent.querySelector("#city-temp").innerText = daydata.main.temp + "°F";
+    parent.querySelector("#city-des").innerText = daydata.weather[0].description;
+    parent.querySelector("#city-hum").innerText =
+      "Humidity: " + daydata.main.humidity + "%";
+    parent.querySelector("#city-wind").innerText =
+      "Wind Speed: " + daydata.wind.speed + "mph";
+    parent.querySelector("#city-icon").src = getWeatherIcon(
+      daydata.weather[0].icon
+    );
+  }
 }
 
 function getWeatherIcon(icon) {
@@ -59,5 +62,6 @@ window.addEventListener("load", () => {
 function main() {
   getWeather("Dallas");
 }
+
 
 main();

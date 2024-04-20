@@ -1,46 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Warming Dashboard</title>
-  <link rel="stylesheet" href="style.css"
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Warming Dashboard</title>
+    <link rel="stylesheet" href="style.css"
+  </head>
 
-<body>
-  <!-- Header -->
-  <!-- <header class="header">
-    <div class=" h1-container d-flex translate-middle bg-dark justify-content-center">
-      <h1 class="h1">Global Warming Dashboard</h1>
-    </div>
-  </header> -->
-
-  <div class="card">
-    <div class="search">
-      <input id="main-search" type="text" class="searchbar" placeholder="Search">
-      <button class="btn1" onclick="sumbit()"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" 
-        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z">
-
-        </path><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 
+  <body>
+  
+    <div class="main-container">
+      <h2 class="city" id="city-heading"></h2>
+      <div class="search">
+        <input
+          id="main-search"
+          type="text"
+          class="searchbar"
+          placeholder="Search"
+        />
+        <button class="btn1" onclick="sumbit()">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 
         9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 
-        7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zm-3.847-8.699a2 2 0 1 0 2.646 2.646 4 4 0 1 1-2.646-2.646z"></path></g></svg>
-      </button>
-    </div>
-    <div class="weather">
-      <div class="weather-info">
-        </div>
-        <div class="weather-details">
-          <h2 class="city" id="city-heading"></h2>
-          <h1 class="temperature" id="city-temp"></h1>
-          <img src="assets/sun.png" id="city-icon" alt="" class="weather-icon"/>
-          <div class="description" id="city-des"></div>
-          <div class="humidity" id="city-hum"></div>
-          <div class="wind" id="city-wind"></div>
-        </div>
-    </div>
-  </div>
+        7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15zm-3.847-8.699a2 2 0 1 0 2.646 2.646 4 4 0 1 1-2.646-2.646z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+      </div>
 
-  <script src="/script/script.js"></script>
-</body>
+      <div class="card-container">
+        <div id="card-0" class="card">
+          <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-details">
+              <h2 class="day" id="day-heading"></h2>
+              <h1 class="temperature" id="city-temp"></h1>
+              <img id="city-icon" alt="" class="weather-icon" />
+              <div class="description" id="city-des"></div>
+              <div class="humidity" id="city-hum"></div>
+              <div class="wind" id="city-wind"></div>
+              <div id="currentday"></div>
+            </div>
+          </div>
+        </div>
 
+        <div id="card-1" class="card">
+          <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-details">
+              <h2 class="day" id="day-heading"></h2>
+              <h1 class="temperature" id="city-temp"></h1>
+              <img id="city-icon" alt="" class="weather-icon" />
+              <div class="description" id="city-des"></div>
+              <div class="humidity" id="city-hum"></div>
+              <div class="wind" id="city-wind"></div>
+              <div id="currentday"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="card-2" class="card">
+          <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-details">
+              <h2 class="day" id="day-heading"></h2>
+              <h1 class="temperature" id="city-temp"></h1>
+              <img id="city-icon" alt="" class="weather-icon" />
+              <div class="description" id="city-des"></div>
+              <div class="humidity" id="city-hum"></div>
+              <div class="wind" id="city-wind"></div>
+              <div id="currentday"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="card-3" class="card">
+          <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-details">
+              <h2 class="day" id="day-heading"></h2>
+              <h1 class="temperature" id="city-temp"></h1>
+              <img id="city-icon" alt="" class="weather-icon" />
+              <div class="description" id="city-des"></div>
+              <div class="humidity" id="city-hum"></div>
+              <div class="wind" id="city-wind"></div>
+              <div id="currentday"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="card-4" class="card">
+          <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-details">
+              <h2 class="day" id="day-heading"></h2>
+              <h1 class="temperature" id="city-temp"></h1>
+              <img id="city-icon" alt="" class="weather-icon" />
+              <div class="description" id="city-des"></div>
+              <div class="humidity" id="city-hum"></div>
+              <div class="wind" id="city-wind"></div>
+              <div id="currentday"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script/script.js"></script>
+  </body>
 </html>
