@@ -31,12 +31,14 @@ function displayWeather(data) {
     "Weather in " + data.city.name;
   for (let i = 0; i < 5; i++) {
     let daydata = data.list[i * 8];
-    
+
     let parent = document.getElementById("card-" + i);
     console.log(data);
-    parent.querySelector("#day-heading").innerText = "Weather on Day " + (i + 1);
+    parent.querySelector("#day-heading").innerText =
+      "Weather on Day " + (i + 1);
     parent.querySelector("#city-temp").innerText = daydata.main.temp + "°F";
-    parent.querySelector("#city-des").innerText = daydata.weather[0].description;
+    parent.querySelector("#city-des").innerText =
+      daydata.weather[0].description;
     parent.querySelector("#city-hum").innerText =
       "Humidity: " + daydata.main.humidity + "%";
     parent.querySelector("#city-wind").innerText =
@@ -62,6 +64,5 @@ window.addEventListener("load", () => {
 function main() {
   getWeather("Dallas");
 }
-
 
 main();
