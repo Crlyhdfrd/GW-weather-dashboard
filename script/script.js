@@ -1,3 +1,4 @@
+// Get the current date
 const date = new Date();
 let day = date.getDate();
 let month = date.getMonth() + 1;
@@ -59,14 +60,17 @@ function displayWeather(data) {
   }
 }
 
+// Get the weather icon
 function getWeatherIcon(icon) {
   return "https://openweathermap.org/img/w/" + icon + ".png";
 }
 
+// Get the weather data from the API
 function sumbit() {
   getWeather(document.getElementById("main-search").value);
 }
 
+// Load the weather data on the page
 window.addEventListener("load", () => {
   getWeather("Dallas");
 });
