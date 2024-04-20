@@ -1,3 +1,13 @@
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+let fullDate = month + "/" + day + "/" + year;
+document.getElementById("date").innerText = fullDate;
+
+
+
 let weather = {
   apiKey: "1d5828eb71ccc2ff98c538b094271c14",
   fetchWeather: function () {},

@@ -10,6 +10,12 @@ body {
   font-size: 120%;
 }
 
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 3em;
+}
+
 .main-container {
   display: flex;
   justify-content: center;
