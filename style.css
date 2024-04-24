@@ -81,3 +81,19 @@ h1.temperature {
 .description {
   text-transform: capitalize;
 }
+
+.search-history {
+  background-color: cadetblue;
+  border-radius: 24px;
+  padding: 1em;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: darkslategray;
+  border-radius: 15px;
+  color:blue;
+}
